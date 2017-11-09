@@ -1,0 +1,39 @@
+{
+  "name": "trespass",
+  "version": "1.0.0",
+  "description": "Access and chain object properties and methods in a safe manner.",
+  "main": "index.js",
+  "author": "Rick Wong <rick@webambition.nl> (https://rick.codes)",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RickWong/trespass.git"
+  },
+  "homepage": "https://github.com/RickWong/trespass",
+  "keywords": [
+    "es6",
+    "proxy",
+    "deep",
+    "object",
+    "tresspass",
+    "properties",
+    "property",
+    "null",
+    "undefined",
+    "propagation",
+    "chain",
+    "existential",
+    "operator",
+    "optional"
+  ],
+  "devDependencies": {
+    "jest": "21.2.1"
+  },
+  "engines": {
+    "node": ">= 6.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch"
+  }
+}
