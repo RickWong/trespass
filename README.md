@@ -10,13 +10,19 @@ npm install --save trespass
 
 ## Usage
 
+Simple:
+
 ```js
 import t from 'trespass';
 
 t(null).foo.$; // access undefined properties 
 t(undefined).bar().$; // call undefined methods
-t(undefined).bar().baz.$; // call undefined methods, and then access undefined properties
+t({}).bar().baz.$; // call undefined methods and then access undefined properties
+```
 
+Custom terminator:
+
+```js
 const t2 = t.createWrapper('$val'); // trespass with custom terminator
 t2(foo).bar.$val; 
 ```
