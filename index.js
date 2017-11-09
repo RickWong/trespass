@@ -12,6 +12,12 @@ const createWrapper = (terminator = '$') => {
         apply(object, context, args) {
             return wrap(object.apply(context, args), terminator);
         },
+        has(object, key) {
+            return key in object.$;
+        },
+        deleteProperty(object, key) {
+            delete object.$[key];
+        },
     };
 
     const wrap = (value) => {

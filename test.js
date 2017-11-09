@@ -67,3 +67,19 @@ test('works with custom terminator ø', () => {
     expect(ø(item).ø.foo).toBe('bar');
     expect(ø(item).foo.ø).toBe('bar');
 });
+
+test('has works', () => {
+    const item = { foo: 'bar' };
+
+    expect('foo' in $(item)).toBe(true);
+    expect('fuu' in $(item)).toBe(false);
+});
+
+
+test('delete works', () => {
+    const item = { foo: 'bar' };
+
+    expect('foo' in $(item)).toBe(true);
+    delete $(item).foo;
+    expect('foo' in $(item)).toBe(false);
+});
