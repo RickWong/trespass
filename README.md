@@ -6,19 +6,19 @@ Access and chain object properties and methods in a safe manner.
 
 ```bash
 npm install --save trespass
-# or
-yarn add trespass
 ```
 
 ## Usage
 
 ```js
-import $ from 'trespass';
+import t from 'trespass';
 
-$(null).foo.$; // undefined properties 
-$(undefined).bar().baz.$; // undefined methods
+t(null).foo.$; // access undefined properties 
+t(undefined).bar().$; // call undefined methods
+t(undefined).bar().baz.$; // call undefined methods, and then access undefined properties
 
-$.createWrapper('$val')(foo).bar.$val; // custom terminator
+const t2 = t.createWrapper('$val'); // trespass with custom terminator
+t2(foo).bar.$val; 
 ```
 
 ## Requirements
