@@ -1,6 +1,6 @@
 # trespass
 
-Access and chain object properties and methods in a safe manner.
+Tired of `&&` or `?:` property guarding? Access undefined object properties and chain undefined methods in a safe manner.
 
 ## Installation
 
@@ -15,16 +15,24 @@ Simple:
 ```js
 import t from 'trespass';
 
-t(null).foo.$; // access undefined properties 
-t(undefined).bar().$; // call undefined methods
-t({}).bar().baz.$; // call undefined methods and then access undefined properties
+const fakeUser = undefined;
+const realUser = { name: 'Rick' };
+
+t(fakeUser).contact.$; // access undefined or null objects
+
+t(realUser).contact.faxNumber.$; // access undefined properties
+
+t(realUser).greet().fakeSlap().$; // chain defined and undefined methods
+
+t(fakeUser).fakeSlap().greet().fakeName.$; // all together
 ```
 
 Custom terminator:
 
 ```js
-const t2 = t.createWrapper('$val'); // trespass with custom terminator
-t2(foo).bar.$val; 
+const $ = t.createWrapper('$val'); 
+
+$(foo).bar.$val; 
 ```
 
 ## Requirements
