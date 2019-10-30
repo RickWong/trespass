@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Access and chain object properties and methods in a safe manner.",
   "main": "index.js",
-  "author": "Rick Wong <rick@webambition.nl> (https://rick.codes)",
+  "author": "Rick Wong",
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
