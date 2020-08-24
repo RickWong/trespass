@@ -27,7 +27,7 @@
     "optional"
   ],
   "devDependencies": {
-    "jest": "21.2.1"
+    "jest": "26.4.2"
   },
   "engines": {
     "node": ">= 6.4"
